@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px 8px 0 0;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content h2 {
+      color: #333;
+    }
+    .content p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      padding: 20px 0;
+      border-top: 1px solid #eaeaea;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1>Welcome to My Awesome Site</h1>
+    </div>
+    <div class="content">
+      <h2>Hello, <%= @user.name %>!</h2>
+      <p>
+        Thank you for visiting Action mailer demo site. We are thrilled to have you on board.
+      </p>
+    <div class="footer">
+      <p>&copy; Action mailer demo site. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
