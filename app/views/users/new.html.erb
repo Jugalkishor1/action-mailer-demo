@@ -1,8 +1,8 @@
-<h1>Sign Up</h1>
+<h1 class="title">Sign Up</h1>
 
-<%= form_with model: @user, local: true do |form| %>
+<%= form_with model: @user, local: true, class: "form-container" do |form| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="error-messages">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
@@ -12,17 +12,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-input" %>
   </div>
 
-  <div>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="form-group">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.text_field :email, class: "form-input" %>
   </div>
 
-  <div>
-    <%= form.submit 'Create User' %>
+  <div class="form-group">
+    <%= form.submit 'Create User', class: "form-submit" %>
   </div>
 <% end %>
